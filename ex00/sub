@@ -2,56 +2,55 @@ Assignment name  : cpp_module_00
 Expected files   : Warlock.cpp Warlock.hpp
 --------------------------------------------------------------------------------
 
-Make a Warlock class. It has to be in Coplien's form.
+Créez une classe Warlock en forme de Coplien.
 
-It has the following private attributes :
+Elle a les attributs privés suivants:
 * name (string)
 * title (string)
 
-Since they're private, you will write the following getters :
-* getName, returns a reference to constant string
-* getTitle, returns a reference to constant string
+Vu qu'ils sont privés, vous aurez besoin des getters suivants :
+* getName, retourne une référence vers string constante
+* getTitle, retourne une référence vers string constante
 
-Both these functions will have to be callable on a constant Warlock.
+Ces deux fonctions doivent pouvoir être appelées sur un Warlock constant.
 
-Create the following setter: 
-* setTitle, returns void and takes a reference to constant string
+Créez également le setter suivant :
+* setTitle, retourne void et prend une référence sur string constante.
 
-Your Warlock will also have, in addition to whatever's required by Coplien's
-form, a constructor that takes, in this order, its name and title. Your Warlock
-will not be able to be copied, instantiated by copy, or instantiated without a
-name and a title.
+Votre Warlock va aussi avoir, en plus de tout ce qui est requis par la forme de
+Coplien, un constructeur prenant dans l'ordre son nom et son titre. Il ne peut
+ni être copìé, ni instancié par copie, ni instancié sans nom et titre.
 
-For example :
+Par exemple :
 
-Warlock bob;                            //Does not compile
-Warlock bob("Bob", "the magnificent");  //Compiles
-Warlock jim("Jim", "the nauseating");   //Compiles
-bob = jim;                              //Does not compile
-Warlock jack(jim);                      //Does not compile
+Warlock bob;                            //Ne compile pas
+Warlock bob("Bob", "the magnificent");  //Compile
+Warlock jim("Jim", "the nauseating");   //Compile
+bob = jim;                              //Ne compile pas
+Warlock jack(jim);                      //Ne compile pas
 
-Upon creation, the Warlock says :
+À la création, le Warlock dit :
 
 <NAME>: This looks like another boring day.
 
-Of course, whenever we use placeholders like <NAME>, <TITLE>, etc...
-in outputs, you will replace them by the appropriate value. Without the < and >.
+Bien évidemment, quand on utilise des placeholders comme <NAME>, <TITLE>,
+<QUOTE1>, etc... dans les sorties, vous les remplacerez par la valeur
+appropriée.
 
-When he dies, he says:
+À sa mort, il dit:
 
 <NAME>: My job here is done!
 
-Our Warlock must also be able to introduce himself, while boasting with all its
-might.
+Il devra également pouvoir se présenter tout en se mettant bien en valeur.
 
-So you will write the following function:
+Écrivez donc la fonction suivante:
 * void introduce() const;
 
-It must display:
+Qui affichera:
 
 <NAME>: I am <NAME>, <TITLE>!
 
-Here's an example of a test main function and its associated output:
+Voici un exemple de fonction main avec sa sortie:
 
 int main()
 {
